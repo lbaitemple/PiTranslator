@@ -24,7 +24,7 @@ def transcribe(lang):
     print "listening .."
 #    os.system(
 #        'arecord -D plughw:1,0 -f cd -c 1 -t wav -d 0 -q -r 16000 -d 3 | flac - -s -f --best --sample-rate 16000 -o ' + filename)
-    os.system('rec -r 16000 ' + filename + ' silence 1 0.1 5% 1 2.0 5%')
+    os.system('AUDIODEV=hw:1,0 rec -r 16000 ' + filename + ' silence 1 0.1 5% 1 2.0 5%')
 
     print "interpreting .."
     # send the file to google speech api
