@@ -18,7 +18,7 @@ def speak_text(language, phrase):
     
 
 def transcribe(lang):
-    key = 'AIzaSyAcalCzUvPmmJ7CZBFOEWx2Z1ZSn4Vs1gg'
+    key = 'your key'
     stt_url = 'https://www.google.com/speech-api/v2/recognize?client=chromium&lang='+ lang + '&key=' + key
     filename = 'test.flac'
     print "listening .."
@@ -59,8 +59,8 @@ class Translator(object):
  
     def __init__(self):
         oauth_args = {
-            'client_id': 'TranslationPi',
-            'client_secret': 'l8Hhx/ejsWLIaTAcu/f7TV04epEqQM3WwmB5Da1iPp0=',
+            'client_id': 'your client id from azure',
+            'client_secret': 'azure secret',
             'scope': 'http://api.microsofttranslator.com',
             'grant_type': 'client_credentials'
         }
